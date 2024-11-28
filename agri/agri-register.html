@@ -1,0 +1,415 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRI Registration - Symposium 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="register.css">
+    <meta name="description" content="Welcome to the National Level Symposium at AVS College of Technology!">
+
+    <link rel="icon" href="../AVSCT.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../AVSCT.jpg" type="image/x-icon" alt="AVS College of Technology Logo">
+
+    <!--  bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a class="logo" href="#">AVS College of Technology</a>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#register-link">Registration</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <hr>
+    </header>
+
+    <!-- main -->
+    <main>
+        <h1 class="text-center text-light pt-5">Agricultural Registration</h1>
+
+          <!-- form -->
+          <div class="main d-flex justify-content-center align-items-center pt-4 container">
+
+            <form action="process_form.php" method="POST" enctype="multipart/form-data" class="needs-validation"
+                id="form">
+
+                <!-- Your Name -->
+                <div class="row">
+
+                    <div class="col-md-12 mb-4">
+
+                        <div class="form-outline field">
+                            <label class="form-label" for="to_name">Full Name (initial at last)</label>
+                            <input type="text" id="to_name" name="to_name" class="form-control form-control-lg"
+                                placeholder="Name for certificate" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- email & phone -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline field">
+                            <label class="form-label" for="emailAddress">Email</label>
+                            <input type="email" id="emailAddress" name="emailAddress"
+                                class="form-control form-control-lg" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control form-control-lg"
+                                placeholder="Enter phone number" required maxlength="13" minlength="10">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DOB & Gender -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                        <div class="form-outline datepicker w-100">
+                            <label for="birthdayDate" class="form-label">DOB</label>
+                            <input type="date" class="form-control form-control-lg" id="birthdayDate"
+                                name="birthdayDate" placeholder="dd/mm/yyyy" required>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Gender: </label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="female"
+                                required>
+                            <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="maleGender" value="male">
+                            <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- whatsapp & College -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="whatsappNumber">Whatsapp Number</label>
+                            <input type="tel" id="whatsappNumber" name="whatsappNumber"
+                                class="form-control form-control-lg" placeholder="Enter whatsapp number" required
+                                maxlength="13" minlength="10">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="collegename">College</label>
+                            <input type="text" id="collegename" name="collegename" class="form-control form-control-lg"
+                                placeholder="Enter your college name" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- department & year of study -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="department">Department</label>
+                            <select name="department" id="department" class="form-select" required>
+                                <option value="cse" class="form-check-input" selected>CSE</option>
+                                <option value="ece" class="form-check-input">ECE</option>
+                                <option value="eee" class="form-check-input">EEE</option>
+                                <option value="mech" class="form-check-input">MECH</option>
+                                <option value="agri" class="form-check-input">AGRI</option>
+                                <option value="aids" class="form-check-input">AI&DS</option>
+                                <option value="it" class="form-check-input">IT</option>
+                                <option value="civil" class="form-check-input">CIVIL</option>
+                                <option value="other" class="form-check-input">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="yearofstudy">Year of Study</label>
+                            <select name="yearofstudy" id="yearofstudy" class="form-select" required>
+                                <option value="first" class="form-check-input" selected>1</option>
+                                <option value="second" class="form-check-input">2</option>
+                                <option value="third" class="form-check-input">3</option>
+                                <option value="forth" class="form-check-input">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- technical & non-technical -->
+                <div class="row">
+
+                    <!-- technical events -->
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label">Technical Events (select max 2)</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="technical[]" id="paperpresentation"
+                                    value="Paper Presentation">
+                                <label class="form-check-label" for="paperpresentation">Paper Presentation</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="technical[]" id="posterdesign"
+                                    value="Poster Design">
+                                <label class="form-check-label" for="posterdesign">POSTER DESIGN</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="technical[]" id="technicalquiz"
+                                    value="Technical Quiz">
+                                <label class="form-check-label" for="technicalquiz">TECHNICAL QUIZ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="technical[]" id="fieldlayout"
+                                    value="Field Layout">
+                                <label class="form-check-label" for="fieldlayout">FIELD LAYOUT</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Non-Technical Events -->
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label">Non-Technical Events (select max 2)</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="nontechnical[]" id="connections"
+                                    value="Connections">
+                                <label class="form-check-label" for="connections">CONNECTIONS</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="nontechnical[]" id="findmeknowme"
+                                    value="Find me know me">
+                                <label class="form-check-label" for="findmeknowme">Find Me Know Me</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="nontechnical[]" id="surpriseevent"
+                                    value="Surprise Event">
+                                <label class="form-check-label" for="surpriseevent">Surprise Event</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="nontechnical[]" id="photography"
+                                    value="Photography">
+                                <label class="form-check-label" for="photography">Photography</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- file .ppt upload -->
+                <div class="row">
+
+                    <div class="col-md-4 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="uploadappt">Send a .ppt, .pptx, .pdf file format
+                                Max 2MB [collegename_title.ppt]</label>
+                                <a href="mailto:avsagrisymposium@gmail.com" class="btn text-bg-light">avsagrisymposium@gmail.com</a>
+                            <input type="file" id="uploadappt" name="pptFile" class="form-control mt-3" hidden>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- whatsapp join link -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <h2>Whatsapp Group Link</h2>
+                            <p>Join whatsapp group to get instantly notification about our symposium events, bus route
+                                details.</p>
+                            <a href="https://chat.whatsapp.com/HJ5nXyJCAw72VL0GqmsN9Y" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-danger">Join
+                                Whatsapp Link</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-4 pt-2">
+                    <input class="btn btn-primary btn-lg" type="submit" id="button" value="Submit">
+                </div>
+
+            </form>
+
+            <div class="sucessmsg" id="successMessage" style="display: none;">
+                <!-- <img src="thankyou.svg" alt="thank you" class="img-fluid thankyou-img"> -->
+                <h1 class="text-center">Thank You For Registration</h1>
+                <h6 class="text-center">Your Registration successfully Submitted</h6>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <hr>
+        <p class="text-center text-secondary pb-4">Copyrights &copy; 2024 <a href="https://www.avstech.ac.in/"
+                class="text-decoration-none">AVS College
+                of Technology.</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("input[name='nontechnical[]']").change(function () {
+                var maxAllowed = 2;
+
+                var cnt = $("input[name='nontechnical[]']:checked").length;
+                if (cnt > maxAllowed) {
+                    $(this).prop("checked", "");
+                    alert('You can select maximum ' + maxAllowed + ' Event!!');
+                }
+
+            });
+            $('#button').click(function () {
+                checked = $("input[type=checkbox]:checked").length;
+
+                if (!checked) {
+                    alert("You must check at least one Event.");
+                    return false;
+                }
+            });
+        });
+        $(document).ready(function () {
+            $("input[name='technical[]']").change(function () {
+                var maxAllowed = 2;
+
+                var mnm = $("input[name='technical[]']:checked").length;
+                if (mnm > maxAllowed) {
+                    $(this).prop("checked", "");
+                    alert('You can select maximum ' + maxAllowed + ' Event!!');
+                }
+
+            });
+            $('#button').click(function () {
+                checked = $("input[type=checkbox]:checked").length;
+
+                if (!checked) {
+                    alert("You must check at least one Event.");
+                    return false;
+                }
+            });
+        });
+    </script>
+
+    <!-- script -->
+    <script src="../bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+
+        <!-- ppt format check -->
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+    
+                let fileInput = document.getElementById('uploadappt');
+                if (fileInput.files.length > 0) {
+                    let fileSize = fileInput.files[0].size; // Get the size of the uploaded file
+                    let maxSize = 10 * 1024 * 1024; // 10MB in bytes
+    
+                    if (fileSize > maxSize) {
+                        alert('File size exceeds the limit of 10MB. Please upload a file smaller than 10MB.');
+                        return;
+                    }
+    
+                    let filePath = fileInput.value;
+                    let allowedExtensions = ['ppt', 'pptx', 'pdf'];
+                    let fileExtension = filePath.split('.').pop();
+    
+                    if (!allowedExtensions.includes(fileExtension.toLowerCase())) {
+                        alert('File type not allowed. Please upload a PPT, PPTX, or PDF file.');
+                        return;
+                    }
+                }
+    
+                // Create a FormData object to collect form data
+                let formData = new FormData(document.querySelector('form'));
+    
+                // Send the form data using fetch or XMLHttpRequest
+                fetch('process_form.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (response.ok){
+                        // const btn = document.getElementById('button');
+
+                        // btn.value = 'Sending.....';
+
+                        // const serviceID = 'service_pc9io4w';
+                        // const templateID = 'template_o9kvxgn';
+
+                        // emailjs.sendForm(serviceID, templateID, this)
+                        //     .then(() => {
+                        //         btn.value = 'SEND EMAIL';
+                        //         console.log('Email Sent!');
+                                document.getElementById('form').style.display = 'none';
+                                // Show the success message
+                                document.getElementById('successMessage').style.display = 'block';
+                            // }, (err) => {
+                            //     btn.value = 'Send Email';
+                            //     alert(JSON.stringify(err));
+                            // });
+                    }  else {
+                            if (response.status === 400) {
+                                alert('Error: Please fill in all required fields.');
+                            } else if (response.status === 500) {
+                                alert('Error: Internal Server Error. Please try again later.');
+                            } else { alert('Error submitting form. Please try again.'); }
+                        }
+                    })
+                    .catch(error => {
+                        // Display a general error message for connection or fetch-related issues
+                        alert('Error submitting form. Please try again.');
+                    });
+            }
+    
+            // Add an event listener to the form submission
+            document.querySelector('form').addEventListener('submit', handleFormSubmit);
+        </script>
+    
+        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+        <script type="text/javascript">
+            emailjs.init('W4iQ3oQ0u69uJpDPD')
+        </script> -->
+
+</body>
+
+</html>

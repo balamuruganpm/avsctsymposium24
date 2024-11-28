@@ -1,0 +1,41 @@
+/* thank you */
+.sucessmsg {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sucessmsg h1 {
+  color: white;
+}
+
+.thankyou-img {
+  width: 30%;
+}
+
+.sucessmsg h1 {
+  font-size: 2rem;
+  padding-top: 30px;
+  color: orange;
+}
+
+.sucessmsg p {
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
+@media (max-width: 488px) {
+  .sucessmsg h1 {
+    font-size: 3rem;
+  }
+
+  .sucessmsg p {
+    font-size: 2rem;
+  }
+
+  .thankyou-img {
+    width: 70%;
+  }
+}

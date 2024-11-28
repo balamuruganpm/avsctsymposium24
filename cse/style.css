@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
+
+@font-face {
+  font-family: got;
+  src: url(../GameofThrones.ttf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: white;
+  font-family: K2D, sans-serif;
+}
+
+/* loader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right top,
+    #020f23,
+    #021026,
+    #011028,
+    #01112b,
+    #00112d,
+    #080e2a,
+    #0f0c26,
+    #130923,
+    #16041a,
+    #140211,
+    #0d0107,
+    #000000
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border-top: 5px solid red;
+  border-left: 3px solid brown;
+  border-bottom: 1px solid purple;
+  border-right: transparent;
+  animation: spinner 0.8s linear infinite;
+}
+
+.preloader p {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  font-family: K2D;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide the preloader when the page is fully loaded */
+.preloader.loaded {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body {
+  background: -webkit-linear-gradient(
+    to right top,
+    #020f23,
+    #021026,
+    #011028,
+    #01112b,
+    #00112d,
+    #080e2a,
+    #0c0c26,
+    #0d0923,
+    #04051a,
+    #070214,
+    #03010d,
+    #000000
+  );
+  background: linear-gradient(
+    to right top,
+    #020f23,
+    #021026,
+    #011028,
+    #01112b,
+    #00112d,
+    #080e2a,
+    #0f0c26,
+    #130923,
+    #16041a,
+    #140211,
+    #0d0107,
+    #000000
+  );
+}
+
+header {
+  height: max-content;
+  display: grid;
+  text-align: center;
+  padding: 20px 20px 0px 20px;
+  align-items: center;
+  transition: 1500ms ease-in-out;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+header hr {
+  margin: 1%;
+}
+
+.logo {
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: orange;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+}
+
+header ul li {
+  padding: 10px 50px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+header ul li:first-child a {
+  color: rgba(255, 255, 255, 0.938);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.938);
+}
+
+header ul li a:hover {
+  color: rgba(255, 255, 255, 0.938);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.938);
+}
+
+/* hero */
+.heros {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.hero h1 {
+  letter-spacing: 5px;
+  transition: 500ms ease-in;
+  font-size: 3rem;
+  font-family: got;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #74708adc;
+  padding-top: 10px;
+}
+
+.hero h6 {
+  transition: 1000ms ease-in-out;
+  color: #ffffffdc;
+}
+
+.hero p {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero .register {
+  padding: 12px;
+  color: white;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(3, 3, 53, 0.699);
+  box-shadow: 2px 3px 5px rgba(245, 245, 245, 0.384);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.hero .alinks a:last-child {
+  margin-left: 20px;
+}
+
+.hero .register:hover {
+  background-color: rgba(8, 8, 68, 0.699);
+}
+
+.swipe-down {
+  font-size: 1.5rem;
+  font-family: K2D;
+}
+
+/* technical events */
+.deptcard {
+  width: 100%;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.deptcards .dept1 {
+  width: 270px;
+  height: 450px;
+  color: white;
+  font-family: K2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dept1 ul li i {
+  text-align: left;
+  color: orange;
+}
+
+.dept1 button {
+  margin: 0%;
+  background-color: rgba(3, 3, 53, 0.11);
+  font-size: 0.8rem;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  color: white;
+  background: rgba(189, 189, 189, 0.089);
+  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.32);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.backSide h5 {
+  color: orange;
+  font-size: 1rem;
+}
+
+.backSide p {
+  font-size: 0.7rem;
+}
+
+.backSide ul {
+  list-style: symbols(1);
+}
+
+.backSide ul li {
+  font-size: 0.8rem;
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.ppt-img {
+  border-radius: 10px;
+  width: 90%;
+}
+
+.roundslist {
+  list-style: decimal;
+}
+
+/* profile contact */
+.cse {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profilecard {
+  background-color: #231e3985;
+  color: #b3b8cd;
+  padding: 30px 0px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.32);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: 250px;
+  text-align: center;
+}
+
+.profilecard .round {
+  border: 1px solid rgba(76, 76, 124, 0.699);
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.profilecard h3 {
+  font-size: 1.3rem;
+  padding-top: 10px;
+  color: orange;
+}
+
+.profilecard p {
+  font-size: 1rem;
+}
+
+.buttons .primary {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(3, 3, 53, 0.699);
+  box-shadow: 2px 3px 5px rgba(245, 245, 245, 0.384);
+  border-radius: 12px;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+.bottons .primaryghost {
+  margin-left: 10px;
+}
+
+.profilecard .sociallinks {
+  padding: 10px 0px 20px 0px;
+}
+
+/* registration box */
+.box-reg {
+  width: 80%;
+  padding: 50px 10px;
+  background: rgba(255, 68, 0, 0.938);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 22px 0 orangered;
+  border-radius: 10px;
+  font-family: K2D;
+  border: 1px solid rgba(255, 249, 249, 0.315);
+  border-radius: 12px;
+}
+
+.box-reg p {
+  font-size: 1.7rem;
+  text-align: center;
+  color: white;
+}
+
+.box-reg .register {
+  font-size: 1.2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Position the Page Up button */
+#pageUpButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right top, #021635, #05044b, #011028);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#pageUpButton:hover {
+  background-color: #0056b3;
+}
+
+/* thank you */
+.sucessmsg {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sucessmsg h1 {
+  color: white;
+}
+
+.thankyou-img {
+  width: 100%;
+}
+
+.sucessmsg h1 {
+  font-size: 2rem;
+  padding-top: 30px;
+  color: orange;
+}
+
+.sucessmsg p {
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
+/* tablet */
+@media (max-width: 780px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  header ul li {
+    padding: 10px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .deptcard {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .profilecard {
+    margin: 20px 0px;
+  }
+
+  .box-reg p {
+    font-size: 1.3rem;
+  }
+
+  .box-reg .register {
+    font-size: 1rem;
+  }
+
+  .thankyou-img {
+    width: 80%;
+  }
+}
+
+/* big tab or small lab */
+@media (min-width: 780px) and (max-width: 850px) {
+  .deptcard {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1200px) {
+  .deptcard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  header ul {
+    justify-content: space-evenly;
+  }
+
+  header ul li {
+    padding: 10px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  header ul li a {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .aboutus h1 {
+    font-size: 1.9rem;
+    line-height: 50px;
+  }
+
+  .btnss .registers {
+    margin-left: 30px;
+  }
+
+  .hero .register {
+    width: 35%;
+    margin: 0%;
+  }
+
+  .deptcard {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .deptcards .dept1 {
+    width: 80%;
+    height: 470px;
+    color: white;
+    font-family: K2D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .box-reg p {
+    font-size: 1.3rem;
+  }
+
+  .box-reg .register {
+    font-size: 1rem;
+  }
+}
