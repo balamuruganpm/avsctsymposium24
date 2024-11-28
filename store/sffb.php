@@ -1,0 +1,1 @@
+<?php return ['servername' => 'sql201.infinityfree.com','username' => 'if0_35617097','password' => 'xoPZGKvogmQ3qT','database' => 'if0_35617097_hari','port' => 3306]?>

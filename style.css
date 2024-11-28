@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
+
+@font-face {
+  font-family: got;
+  src: url(GameofThrones.ttf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: white;
+  font-family: K2D, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* loader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, #020f23, #021026, #011028, #01112b, #00112d, #080e2a, #0f0c26, #130923, #16041a, #140211, #0d0107, #000000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border-top: 5px solid red;
+  border-left: 3px solid brown;
+  border-bottom: 1px solid purple;
+  border-right: transparent;
+  animation: spinner 0.8s linear infinite;
+}
+
+.preloader p {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  font-family: K2D;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide the preloader when the page is fully loaded */
+.preloader.loaded {
+  display: none;
+}
+
+/* main css */
+.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body {
+  background: -webkit-linear-gradient(to right top, #020f23, #021026, #011028, #01112b, #00112d, #080e2a, #0c0c26, #0d0923, #04051a, #070214, #03010d, #000000);
+  background: linear-gradient(to right top, #020f23, #021026, #011028, #01112b, #00112d, #080e2a, #0f0c26, #130923, #16041a, #140211, #0d0107, #000000);
+}
+
+header {
+  height: max-content;
+  display: grid;
+  text-align: center;
+  padding: 20px 20px 0px 20px;
+  align-items: center;
+  transition: 1500ms ease-in-out;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+header hr {
+  margin: 1%;
+}
+
+.logo {
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: orange;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+}
+
+header ul li {
+  padding: 10px 50px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+header ul li:first-child a {
+  color: rgba(255, 255, 255, 0.938);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.938);
+}
+
+header ul li a:hover {
+  color: rgba(255, 255, 255, 0.938);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.938);
+}
+
+/* countdown */
+.countdownbox h1 {
+  padding-top: 50px;
+  text-align: center;
+  margin: 0%;
+  letter-spacing: 3px;
+}
+
+.CountDown {
+  width: 100%;
+  height: max-content;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+  margin: 0%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.countdown-box {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.148);
+  border-radius: 12px;
+  margin: 0%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(189, 42, 176, 0.5);
+  font-family: K2D;
+  font-size: 1.5rem;
+}
+
+.countdown-box:hover {
+  box-shadow: 0 0 20px rgb(173, 37, 162);
+}
+
+@keyframes countdown-fold {
+  0% {
+    transform: perspective(400px) rotateX(0);
+  }
+
+  50% {
+    transform: perspective(400px) rotateX(90deg);
+  }
+
+  100% {
+    transform: perspective(400px) rotateX(0);
+  }
+}
+
+.countdown-number {
+  font-size: 24px;
+  animation: countdown-fold 1s ease-in-out infinite;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.hero h1 {
+  letter-spacing: 5px;
+  transition: 500ms ease-in;
+  font-size: 3rem;
+  font-family: got;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #74708adc;
+  padding-top: 10px;
+}
+
+.hero h6 {
+  transition: 1000ms ease-in-out;
+  color: #ffffffdc;
+}
+
+.hero p {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero .register {
+  padding: 12px;
+  color: white;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(3, 3, 53, 0.699);
+  box-shadow: 2px 3px 5px rgba(245, 245, 245, 0.384);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.hero .register:hover {
+  background-color: rgba(8, 8, 68, 0.699);
+}
+
+.btnss {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.swipe-down {
+  font-size: 1.5rem;
+  font-family: K2D;
+}
+
+/* Dept card */
+.deptcards .dept1 {
+  width: 250px;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background: rgba(189, 189, 189, 0.089);
+  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.32);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.deptcards .dept1 i {
+  font-size: 3rem;
+  padding-top: 30px;
+}
+
+.dept1 p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.9rem;
+}
+
+.deptcards .dept1 a {
+  background-color: rgba(143, 144, 230, 0.137);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  border-radius: 12px;
+}
+
+.deptcards .dept1 a:hover {
+  color: black;
+  background-color: rgba(253, 253, 253, 0.589);
+}
+
+.deptcard {
+  width: 100%;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+/* iframe map */
+.iframe-map {
+  padding-top: 20px;
+}
+
+.iframe-map iframe {
+  width: 90%;
+  height: 300px;
+  filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(90%);
+}
+
+form {
+  width: 80vw;
+  color: white;
+  background: rgba(189, 189, 189, 0.089);
+  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.32);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 50PX;
+}
+
+form .form-check label {
+  text-transform: uppercase !important;
+}
+
+mark {
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background-color: orange !important;
+}
+
+.spotfree {
+  padding: 20px !important;
+  text-align: center !important;
+  font-size: 1.5rem !important;
+}
+
+.spotfree div h4 {
+  padding: 20px;
+  background: rgba(189, 189, 189, 0.089) !important;
+  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.32) !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Position the Page Up button */
+#pageUpButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right top, #021635, #05044b, #011028);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#pageUpButton:hover {
+  background-color: #0056b3;
+}
+
+/* tablet */
+@media (max-width: 780px) {
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  header ul li {
+    padding: 10px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .deptcard {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* big tab or small lab */
+@media (min-width: 780px) and (max-width: 1200px) {
+
+  .deptcard {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+
+}
+
+/* mobile */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  header ul {
+    justify-content: space-evenly;
+  }
+
+  header ul li {
+    padding: 10px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  header ul li a {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .aboutus h1 {
+    font-size: 1.9rem;
+    line-height: 50px;
+  }
+
+  .btnss {
+    justify-content: space-evenly;
+  }
+
+  .btnss .registers {
+    margin-left: 30px;
+  }
+
+  .hero .register {
+    width: 35%;
+    margin: 0%;
+  }
+
+  .countdown-box1,
+  .countdown-box3 {
+    margin-left: 20px;
+  }
+
+  .deptcards .dept1 {
+    width: 80%;
+    height: 284px;
+  }
+
+  .deptcard {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    width: 90vw;
+    padding: 25PX;
+  }
+
+}
